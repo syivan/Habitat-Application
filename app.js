@@ -1,43 +1,35 @@
-let inventory = [];
+const rps_moves = ["ROCK", "PAPER", "SCISSORS"];
 
-let hammer1 = {
-    name: "Baxter 2",
-    model: "B1S",
-    cost: 49,
-    quantity: 25
-};
 
-let tv3 = {
-    name: "Smasung OLED 44 inch",
-    model: "S12G",
-    cost: 450,
-    quantity: 12
-};
+let i = 0, j = 0;
+while (i < 5 && j < 5) {
+    let player_move = Math.floor(Math.random()*3);
+    let pc_move = Math.floor(Math.random()*3);
+    let message = `User played ${rps_moves[player_move]}, CPU played ${rps_moves[pc_move]}`;
 
-let pencil4 = {
-    name: "0.5 pencil",
-    model: "PDWE23",
-    cost: 2.99,
-    quantity: 434
-};
+    console.log(message);
+    if (player_move === pc_move) {
+        alert("TIE");
+    } else {
+        switch(player_move) {
+            case 0:
+                if (pc_move === 2) i++;
+                else j++;
+                break;
+            case 1:
+                if (pc_move === 0) i++;
+                else j++;
+                break;
+            case 2:
+                if (pc_move === 1) i++;
+                else j++;
+                break;
+        }
+    }
+}
+if (i > j) alert("User Wins");
+else alert("CPU wins");
 
-inventory.splice(0,0, hammer1, tv3, pencil4);
-
-console.log(inventory);
-
-let itemToRetrieve = inventory[1];
-console.log(itemToRetrieve);
-
-let mouse5 = {
-    name: "Deathadder Pro",
-    model: "V3",
-    cost: 150,
-    quantity: 4
-};
-
-inventory.splice(0, 0, mouse5);
-
-console.log(inventory.length);
-
-inventory.length = 0;
-console.log(inventory[0]);
+function incrementPlayer(i) {
+    i++;
+}
