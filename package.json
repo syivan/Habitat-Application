@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@hydrogen-css/hydrogen": "^2.0.1"
+  }
+}

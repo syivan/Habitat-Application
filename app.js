@@ -1,35 +1,22 @@
-const rps_moves = ["ROCK", "PAPER", "SCISSORS"];
+arr = ['nice', 'sweet', 'fishy', 'loving','peaceful'];
 
+let word = '1000';
 
-let i = 0, j = 0;
-while (i < 5 && j < 5) {
-    let player_move = Math.floor(Math.random()*3);
-    let pc_move = Math.floor(Math.random()*3);
-    let message = `User played ${rps_moves[player_move]}, CPU played ${rps_moves[pc_move]}`;
+(() => {
+    let word = '5000';
+    console.log(word);
+})();
 
-    console.log(message);
-    if (player_move === pc_move) {
-        alert("TIE");
-    } else {
-        switch(player_move) {
-            case 0:
-                if (pc_move === 2) i++;
-                else j++;
-                break;
-            case 1:
-                if (pc_move === 0) i++;
-                else j++;
-                break;
-            case 2:
-                if (pc_move === 1) i++;
-                else j++;
-                break;
-        }
-    }
+var result = (() => {
+    let result = '7000';
+    return result;
+})();
+
+console.log(result);
+
+let getValue = function(word) {
+    let getValue = word;
+    return getValue;
 }
-if (i > j) alert("User Wins");
-else alert("CPU wins");
 
-function incrementPlayer(i) {
-    i++;
-}
+console.log(getValue('Power'));
